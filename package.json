@@ -1,0 +1,30 @@
+{
+  "name": "browser_foundation",
+  "version": "0.0.1",
+  "description": "Boilerplate for the browser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "build",
+    "postbuild": "npm run minify:js",
+    "minify:js": "uglifyjs obj\\browserSafe_folktale.js -o ./src/minified_foundation.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justgetcoding/browser_foundation.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/justgetcoding/browser_foundation/issues"
+  },
+  "homepage": "https://github.com/justgetcoding/browser_foundation#readme",
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "core.lambda": "^1.0.0",
+    "data.either": "^1.4.0",
+    "data.maybe": "^1.2.2",
+    "data.task": "^3.1.0",
+    "uglify-js": "^2.7.0"
+  }
+}
