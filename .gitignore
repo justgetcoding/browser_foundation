@@ -21,3 +21,6 @@ jspm_packages
 
 # intermediate folder for build
 obj
+
+# build output
+src
