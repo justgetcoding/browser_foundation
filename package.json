@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "build",
     "postbuild": "npm run minify:js",
-    "minify:js": "uglifyjs obj\\browserSafe_folktale.js -o ./src/minified_foundation.js"
+    "minify:js": "uglifyjs obj\\browserified_folktale.js obj\\firstclass_ramda.js -o ./src/foundation.min.js",
+    "postminify:js": "npm run copy_to_samples",
+    "copy_to_samples": "n-copy --source src --destination samples/task/lib \"*\"" 
   },
   "repository": {
     "type": "git",
@@ -25,6 +27,7 @@
     "data.either": "^1.4.0",
     "data.maybe": "^1.2.2",
     "data.task": "^3.1.0",
-    "uglify-js": "^2.7.0"
+    "uglify-js": "^2.7.0",
+    "npm-build-tools": "^2.2.5"
   }
 }
